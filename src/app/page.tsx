@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from 'react';
 
+import { Box } from "@mui/material";
+
 import fetchData from "@/utils/fetchData";
 import { Tag } from '@/types/types';
-
-import { Box, Typography } from "@mui/material";
 
 import TagsTable from "@/components/TagsTable/TagsTable";
 import AppLoading from "@/components/AppLoading";
@@ -34,9 +34,7 @@ export default function Home() {
         fetchDataAsync();
     }, []);
 
-    const handleAlertClose = () => {
-        setError('');
-    };
+    const handleAlertClose = () => setError('');
 
     return (
         <Box sx={{ height: '100vh' }} padding={2}>
